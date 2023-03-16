@@ -1,0 +1,28 @@
+/* A7
+   Date: March 16th, 2023.
+   Written by Matt Heaven
+*/
+
+#include <stdio.h>
+
+int convert_to_seconds(int hours, int minutes) //pass values as parameters
+{
+    return hours * 3600 + minutes * 60;
+} // User-defined function called convert_to_seconds
+
+int main() 
+{
+    int hours, minutes, seconds; //Declaring our operands hours, minutes, seconds as integers
+    
+    printf("Please enter hours: "); //prompt user to enter hours
+    scanf("%d", &hours); //get values from user input
+    
+    printf("Please enter minutes: "); //prompt user to input minutes
+    scanf("%d", &minutes);
+    
+    seconds = convert_to_seconds(hours, minutes); //calling the user-defined function with hours and minutes as arguments
+    
+    printf("%d hours and %d minutes is %d seconds.\n", hours, minutes, seconds);//conversion result is output to the screen
+    
+    return 0;
+}
